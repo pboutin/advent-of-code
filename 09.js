@@ -55,7 +55,6 @@ const score = input.split('').reduce((score, char) => {
   return score;
 }, 0);
 
-
 console.log('First output', score);
 
 /**

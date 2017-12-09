@@ -22,8 +22,10 @@ const instructions = input.map((instruction) => {
 /**
  * Part I
  ********************************/
+
 const getVariable = (register, variable) => register[variable] ? register[variable] : 0;
 let maximum = 0;
+
 const register = instructions.reduce((register, instruction) => {
   const conditionValue = getVariable(register, instruction.conditionVar);
   if (eval(`${conditionValue} ${instruction.condition}`)) {
@@ -36,7 +38,6 @@ const register = instructions.reduce((register, instruction) => {
   }
   return register;
 }, {});
-
 
 console.log('First output', Math.max(...Object.values(register)));
 
