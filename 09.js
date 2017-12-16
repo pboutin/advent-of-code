@@ -7,7 +7,7 @@ const input = fs.readFileSync('09_input.txt')
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let isGarbage = false;
 let isSkipping = false;
@@ -59,6 +59,6 @@ console.log('First output', score);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 console.log('Second output', garbageCount);

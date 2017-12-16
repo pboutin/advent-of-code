@@ -4,7 +4,7 @@ const input = 325489;
 
 /**
  * Part I
- ********************************/
+********************************/
 let distanceX = 0;
 let distanceY = 0;
 let currentValue = 1;
@@ -50,7 +50,7 @@ console.log('First output', getDistanceFor(input));
 
 /**
  * Part II
- ********************************/
+********************************/
 const MAP_DIMENSION = 16;
 let map = Array(MAP_DIMENSION).fill(0).map(() => Array(MAP_DIMENSION).fill(0));
 let currentX = MAP_DIMENSION / 2;

@@ -19,7 +19,7 @@ const input = [
 
 /**
  * Part I
- ********************************/
+********************************/
 const firstOutput = input.reduce((sum, row) => {
   const values = row.split(/\s+/).map((rawValue) => parseInt(rawValue, 10));
   return sum + (Math.max(...values) - Math.min(...values));
@@ -29,7 +29,7 @@ console.log('First output', firstOutput);
 
 /**
  * Part II
- ********************************/
+********************************/
 const secondOutput = input.reduce((sum, row) => {
   const values = row.split(/\s+/).map((rawValue) => parseInt(rawValue, 10)).sort((a, b) => a - b).reverse();
 

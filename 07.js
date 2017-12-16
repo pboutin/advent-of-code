@@ -20,7 +20,7 @@ const nodes = input.reduce((map, line) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 const programNames = Object.keys(nodes);
 const rootProgramName = programNames.find((name) => {
@@ -31,7 +31,7 @@ console.log('First output', rootProgramName);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 Object.values(nodes).forEach((node) => {
   node.children = node.children.map((name) => nodes[name]);

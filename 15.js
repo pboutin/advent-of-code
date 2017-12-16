@@ -13,7 +13,7 @@ const compareLowerBits = (valueA, valueB, lowerBits) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let matchesCount = 0;
 let genAvalue = genAinput;
@@ -29,7 +29,7 @@ console.log('First output', matchesCount);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 matchesCount = 0;
 genAvalue = genAinput;

@@ -8,7 +8,7 @@ const input = fs.readFileSync('05_input.txt')
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let currentIndex = 0;
 let stepsCount = 0;
@@ -26,7 +26,7 @@ console.log('First output', stepsCount);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 currentIndex = 0;
 stepsCount = 0;

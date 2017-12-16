@@ -7,7 +7,7 @@ const input = fs.readFileSync('04_input.txt')
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let validPasswords = input.filter((password) => {
   const words = [];
@@ -24,7 +24,7 @@ console.log('First output', validPasswords.length);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 validPasswords = input.filter((password) => {
   const words = [];

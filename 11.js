@@ -39,13 +39,13 @@ const simplify = (rawDirections) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 console.log('First output', simplify(input).length);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 const steps = input.split(',');
 let currentPath = '';

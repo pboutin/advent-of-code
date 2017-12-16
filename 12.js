@@ -31,7 +31,7 @@ const navigate = (node) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 history = ['0'];
 navigate(nodes['0']);
@@ -40,7 +40,7 @@ console.log('First output', history.length);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 let groupCount = 0;
 

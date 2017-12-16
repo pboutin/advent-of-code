@@ -4,7 +4,7 @@ const input = '5	1	10	0	1	7	13	14	3	12	8	10	7	12	0	6'
 
 /**
  * Part I
- ********************************/
+********************************/
 
 const redistribute = (map, indexToRedistribute) => {
   const getNextIndex = (index, map) => index + 1 === map.length ? 0 : index + 1;
@@ -34,6 +34,6 @@ console.log('First output', stepsCount);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 console.log('Second output', stepsCount - history.indexOf(input.join(',')));

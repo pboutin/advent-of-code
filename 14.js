@@ -48,7 +48,7 @@ const knotHash = (string) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 let truthyBits = 0;
 let disk = [];
 
@@ -67,7 +67,7 @@ console.log('First output', truthyBits);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 const clearDiskFrom = (x, y) => {
   disk[x][y] = '0';

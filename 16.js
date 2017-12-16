@@ -41,7 +41,7 @@ const moves = input.split(',').map((move) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let orderedPrograms = moves.reduce((programs, moveFunc) => moveFunc(programs), 'abcdefghijklmnop'.split(''));
 
@@ -49,7 +49,7 @@ console.log('First output', orderedPrograms.join(''));
 
 /**
  * Part II
- ********************************/
+********************************/
 
 // Found out that after 60 cycle, the programs are back into their initial positions
 // knowing that, we only have to computed the modulo of the crazy billion amount

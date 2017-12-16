@@ -28,7 +28,7 @@ const firewallTick = () => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let firewallDirections = {};
 let firewall = initFirewall();
@@ -43,7 +43,7 @@ console.log('First output', cost);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 let delay = 0
 

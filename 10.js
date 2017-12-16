@@ -35,7 +35,7 @@ const knotHash = (list, lengths, rounds) => {
 
 /**
  * Part I
- ********************************/
+********************************/
 
 let lengths = input.split(',').map(Number);
 let list = Array(listSize).fill().map((_, index) => index);
@@ -46,7 +46,7 @@ console.log('First output', list[0] * list[1]);
 
 /**
  * Part II
- ********************************/
+********************************/
 
 lengths = [...input.split('').map((_, index) => input.charCodeAt(index)), 17, 31, 73, 47, 23];
 list = Array(listSize).fill().map((_, index) => index);

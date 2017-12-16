@@ -2,7 +2,7 @@ const input = '29917128875332952564321392569634257121244516819997569284938677239
 
 /**
  * Part I
- ********************************/
+********************************/
 const firstOutput = input.split('').reduce((sum, currentDigit, index) => {
   const nextDigit = index === input.length - 1 ? input[0] : input[index + 1];
   if (nextDigit !== currentDigit) return sum;
@@ -13,7 +13,7 @@ console.log('First output', firstOutput);
 
 /**
  * Part II
- ********************************/
+********************************/
 const doubleInput = input + input;
 const stepsForward = input.length / 2;
 
