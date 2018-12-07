@@ -55,20 +55,26 @@ const MIN_Y = 0;
 const MAX_X = 500;
 const MAX_Y = 500;
 const PADDING = 250;
+const MAX_DISTANCE = 10000;
 
 const distanceBetween = ([x1, y1], [x2, y2]) => (Math.abs(x2 - x1) + Math.abs(y2 - y1));
 
 const paddedZones = (new Array(POINTS.length)).fill(0);
 const zones = (new Array(POINTS.length)).fill(0);
+let areaSize = 0;
 
 for (let x = MIN_X - PADDING; x <= MAX_X + PADDING; x++) {
   for (let y = MIN_Y - PADDING; y <= MAX_Y + PADDING; y++) {
-    const {index} = POINTS.reduce((acc, point, index) => {
+    const {index, totalDistance} = POINTS.reduce((acc, point, index) => {
       const distance = distanceBetween(point, [x, y]);
-      if (distance < acc.distance) return {index, distance};
-      if (distance === acc.distance) return {index: null, distance};
+      acc.totalDistance += distance;
+
+      if (distance < acc.distance) return {...acc, index, distance};
+      if (distance === acc.distance) return {...acc, index: null, distance};
       return acc;
-    }, {index: null, distance: Infinity});
+    }, {index: null, distance: Infinity, totalDistance: 0});
+
+    if (totalDistance < MAX_DISTANCE) areaSize++;
 
     if (!index) continue;
 
@@ -78,19 +84,6 @@ for (let x = MIN_X - PADDING; x <= MAX_X + PADDING; x++) {
 }
 
 const commonZones = zones.filter((size) => paddedZones.indexOf(size) > -1);
+
 console.log("Part I : ", Math.max(...commonZones));
-
-const MAX_DISTANCE = 10000;
-let areaSize = 0;
-
-for (let x = MIN_X; x <= MAX_X; x++) {
-  for (let y = MIN_Y; y <= MAX_Y; y++) {
-    const totalDistance = POINTS.reduce((acc, point) => {
-      return acc + distanceBetween(point, [x, y]);
-    }, 0);
-
-    if (totalDistance < MAX_DISTANCE) areaSize++;
-  }
-}
-
 console.log("Part II : ", areaSize);
