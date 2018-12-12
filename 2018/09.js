@@ -1,3 +1,5 @@
+const startedAt = Date.now();
+
 // 462 players; last marble is worth 71938 points
 const PLAYERS = 462;
 const TOP_MARBLE = 71938;
@@ -43,3 +45,4 @@ for (let marble = 1; marble <= TOP_MARBLE * 100; marble++) {
 }
 
 console.log('Part II : ', Math.max(...scores));
+console.log('Completed in ', Date.now() - startedAt, ' ms')
