@@ -1,4 +1,4 @@
-defmodule SolutionDayOne do
+defmodule Solution do
   def solve_part_one do
     read_input()
     |> Enum.map(&compute_fuel/1)
@@ -40,7 +40,7 @@ defmodule SolutionDayOne do
 end
 
 IO.puts("Part I")
-IO.puts(SolutionDayOne.solve_part_one())
+IO.puts(Solution.solve_part_one())
 
 IO.puts("\nPart II")
-IO.puts(SolutionDayOne.solve_part_two())
+IO.puts(Solution.solve_part_two())
